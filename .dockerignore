@@ -1,0 +1,8 @@
+.venv
+managed-runtime
+models
+outputs
+dist
+.qvd*
+**/__pycache__
+.git

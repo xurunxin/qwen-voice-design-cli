@@ -1,0 +1,17 @@
+.venv/
+managed-runtime/
+.qvd*/
+models/
+outputs/
+dist/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+local-key
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key

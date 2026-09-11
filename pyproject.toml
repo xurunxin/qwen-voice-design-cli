@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qwen-voice-design-cli"
+version = "0.1.0"
+description = "Agent-oriented voice design CLI with a durable local/remote Qwen3-TTS service"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/xurunxin/qwen-voice-design-cli"
+Issues = "https://github.com/xurunxin/qwen-voice-design-cli/issues"
+
+[project.optional-dependencies]
+server = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "soundfile>=0.12,<1"]
+model = ["qwen-tts==0.1.1", "torch>=2.6,<3", "torchaudio>=2.6,<3"]
+test = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.12"]
+
+[project.scripts]
+qvd = "qvd.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qvd"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

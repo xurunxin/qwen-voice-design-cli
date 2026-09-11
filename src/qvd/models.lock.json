@@ -1,0 +1,8 @@
+{
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+  "revision": "5ecdb67327fd37bb2e042aab12ff7391903235d3",
+  "qwen_tts": "0.1.1",
+  "torch": "2.8.0",
+  "torchaudio": "2.8.0",
+  "cuda_index": "https://download.pytorch.org/whl/cu128"
+}

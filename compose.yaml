@@ -1,0 +1,16 @@
+services:
+  qvd:
+    build: .
+    image: qwen-voice-design:local
+    init: true
+    gpus: all
+    ports:
+      - "127.0.0.1:8096:8096"
+    environment:
+      QVD_API_KEY: ${QVD_API_KEY:?Set QVD_API_KEY}
+    volumes:
+      - ./models/VoiceDesign:/models:ro
+      - qvd-data:/data
+    stop_grace_period: 10m
+volumes:
+  qvd-data:
